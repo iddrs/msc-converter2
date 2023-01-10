@@ -6,7 +6,7 @@ import msc_converter.app, msc_converter.reader.filereader, msc_converter.writer.
 import logging as logger
 
 # Prepara o logger
-logger.basicConfig(format='%(asctime)s\t%(levelname)s\t%(message)s', level=logger.DEBUG, datefmt='%Y-%m-%d %H:%M:S')
+logger.basicConfig(format='%(asctime)s\t%(levelname)s\t%(message)s', level=logger.DEBUG, datefmt='%Y-%m-%d %H:%M:s')
 
 # Prepara o reader
 ano = str(input('Digite o ano [AAAA]: '))
