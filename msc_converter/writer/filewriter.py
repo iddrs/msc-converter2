@@ -22,3 +22,25 @@ class ToPickle:
 
     def write(self, df):
         df.to_pickle(self.destiny)
+
+class ToExcel:
+    """
+    Escreve para arquivos do Excel
+    """
+    def __init__(self, filepath):
+        self.destiny = filepath
+
+    def write(self, df):
+        df.to_excel(self.destiny, sheet_name='MSC', index = False)
+
+
+class ToParquet:
+    """
+    Escreve para arquivos Parquet
+    """
+
+    def __init__(self, filepath):
+        self.destiny = filepath
+
+    def write(self, df):
+        df.to_parquet(self.destiny)

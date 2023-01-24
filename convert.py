@@ -32,11 +32,15 @@ logger.info(f'Carregando dados de {sourcefile}')
 reader = msc_converter.reader.filereader.FromCsv(sourcefile)
 
 # Prepara os writeres
-destinycsv = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\v2\csv', f'{ano}-{mes}.csv')
-destinypickle = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\v2\pickle', f'{ano}-{mes}.pickle')
+# destinycsv = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\csv', f'{ano}-{mes}.csv')
+# destinypickle = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\pickle', f'{ano}-{mes}.pickle')
+destinyexcel = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\excel', f'{ano}-{mes}.xlsx')
+destinyparquet = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\parquet', f'{ano}-{mes}.parquet')
 writers = [
-    msc_converter.writer.filewriter.ToCsv(destinycsv),
-    msc_converter.writer.filewriter.ToPickle(destinypickle)
+    # msc_converter.writer.filewriter.ToCsv(destinycsv),
+    # msc_converter.writer.filewriter.ToPickle(destinypickle),
+    msc_converter.writer.filewriter.ToExcel(destinyexcel),
+    msc_converter.writer.filewriter.ToParquet(destinyparquet)
 ]
 
 # Executa a conversão
