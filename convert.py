@@ -10,7 +10,7 @@ logger.basicConfig(format='%(asctime)s\t%(levelname)s\t%(message)s', level=logge
 
 # Prepara o reader
 ano = str(input('Digite o ano [AAAA]: '))
-mes = str(input('Digite o mês [MM]: ')).zfill(2)
+mes = str(input('Digite o mês [MM] (1 ~ 13): ')).zfill(2)
 
 meses = {
     '01': 'Janeiro',
@@ -26,7 +26,11 @@ meses = {
     '11': 'Novembro',
     '12': 'Dezembro',
 }
-f = f'MSCAgregada{meses[mes]}{ano}.csv'
+
+if mes == '13':
+    f = f'MSCEncerramento{ano}.csv'
+else:
+    f = f'MSCAgregada{meses[mes]}{ano}.csv'
 sourcefile = os.path.join(r'Z:\MSC', ano, f)
 logger.info(f'Carregando dados de {sourcefile}')
 reader = msc_converter.reader.filereader.FromCsv(sourcefile)
