@@ -1,7 +1,7 @@
 # Iniciando o Python Environment
 .\venv\Scripts\activate.ps1
 
-python convert.py
+python main.py
 
 # Desativa o Python Environment
 deactivate
