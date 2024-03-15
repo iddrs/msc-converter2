@@ -38,8 +38,8 @@ reader = msc_converter.reader.filereader.FromCsv(sourcefile)
 # Prepara os writeres
 # destinycsv = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\csv', f'{ano}-{mes}.csv')
 # destinypickle = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\pickle', f'{ano}-{mes}.pickle')
-destinyexcel = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\excel', f'{ano}-{mes}.xlsx')
-destinyparquet = os.path.join(r'C:\Users\Everton\Desktop\Prefeitura\MSC\parquet', f'{ano}-{mes}.parquet')
+destinyexcel = os.path.join(r'C:\Users\Everton\OneDrive - independencia.rs.gov.br\Prefeitura\MSC\excel', f'{ano}-{mes}.xlsx')
+destinyparquet = os.path.join(r'C:\Users\Everton\OneDrive - independencia.rs.gov.br\Prefeitura\MSC\parquet', f'{ano}-{mes}.parquet')
 writers = [
     # msc_converter.writer.filewriter.ToCsv(destinycsv),
     # msc_converter.writer.filewriter.ToPickle(destinypickle),
